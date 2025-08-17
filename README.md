@@ -48,7 +48,7 @@ Long-term fundamentals remain strong; investors tend to buy the dip.
 
 Built 
 Building a mini data pipeline and running statistical models.
-In your project, the pipeline looks like this:
+In this project, the pipeline looks like this:
 
 Data Ingestion
 Pulled daily stock prices from Yahoo Finance
