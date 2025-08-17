@@ -45,3 +45,30 @@ Slower Google Cloud growth
 $75B capital expenditure plan vs. ~$60B expected
 Market reaction shows a “buy the rumor, sell the news” effect.
 Long-term fundamentals remain strong; investors tend to buy the dip.
+
+Built 
+Building a mini data pipeline and running statistical models.
+In your project, the pipeline looks like this:
+
+Data Ingestion
+Pulled daily stock prices from Yahoo Finance
+Pulled 10-K filing dates and financials from SEC EDGAR
+
+Processing / Transformation
+Mapped filing dates to the next trading day
+Calculated forward returns (5d, 20d, 30d)
+Computed financial ratios (ROE, ROA, current ratio, etc.)
+
+Integration
+Combined stock data + financial ratios into a single dataset
+Flagged the event date (K10_filed = 1)
+
+Output
+Ran t-tests on returns before vs. after events
+Correlation analysis between ratios & returns
+Generated plots of stock prices around filings
+
+Statistical Models Part
+t-tests → test if pre-event vs. post-event returns differ significantly
+Correlation matrix → see relationships between fundamentals (ROE, ROA, debt/equity) and returns
+Event study framework itself is a classic applied econometric/statistical model in finance
